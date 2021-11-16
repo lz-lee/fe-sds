@@ -1,6 +1,6 @@
 {
   "name": "@fe-sds/icons",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "",
   "license": "MIT",
   "main": "lib/fe-sds-icons.cjs.js",
@@ -22,7 +22,7 @@
   },
   "scripts": {
     "build": "rm -rf lib && rollup -c && npm run copy",
-    "copy": "cp package.json lib",
+    "copy": "cp package.json lib && cp images.d.ts lib && cp -rf src/icons lib/icons",
     "test": "echo \"Error: run tests from root\" && exit 1"
   },
   "devDependencies": {

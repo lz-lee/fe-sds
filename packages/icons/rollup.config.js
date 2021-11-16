@@ -18,7 +18,7 @@ export default [
 		plugins: [
 			resolve(),
 			commonjs(),
-			typescript(),
+			typescript({ tsconfig: "./tsconfig.json" }),
 			svgr(),
 			image({
 				exclude: "**/*.svg",
@@ -29,7 +29,12 @@ export default [
 	{
 		input: "src/index.ts",
 		external: ["ms"],
-		plugins: [typescript(), svgr(), image({ exclude: "**/*.svg" })],
+		plugins: [
+			typescript({ tsconfig: "./tsconfig.json" }),
+			,
+			svgr(),
+			image({ exclude: "**/*.svg" }),
+		],
 		output: [
 			{ file: pkg.main, format: "cjs", exports: "auto" },
 			{ file: pkg.module, format: "es", exports: "auto" },

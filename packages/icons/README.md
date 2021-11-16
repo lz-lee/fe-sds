@@ -1,11 +1,15 @@
 # `@fe-sds/icons`
 
-> TODO: description
+> png svg 等 icons
 
 ## Usage
 
 ```
-const icons = require('@fe-sds/icons');
+import { BackArrow, cdbi } from '@fe-sds/icons'
 
-// TODO: DEMONSTRATE API
+// svg
+<BackArrow />
+
+// png
+<img src={cdbi} />
 ```

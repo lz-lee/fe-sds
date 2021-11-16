@@ -1,6 +1,6 @@
 {
   "name": "@fe-sds/utils",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "homepage": "",
   "license": "MIT",
   "main": "lib/fe-sds-utils.cjs.js",

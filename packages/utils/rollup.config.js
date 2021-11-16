@@ -8,18 +8,22 @@ export default [
 	{
 		input: "src/index.ts",
 		output: {
-			name: "fe-sds-icons",
+			name: "fe-sds-utils",
 			file: pkg.browser,
 			format: "umd",
 			exports: "auto",
 		},
-		plugins: [resolve(), commonjs(), typescript()],
+		plugins: [
+			resolve(),
+			commonjs(),
+			typescript({ tsconfig: "./tsconfig.json" }),
+		],
 	},
 	// CommonJS for Node and ES module for bundlers build
 	{
 		input: "src/index.ts",
 		external: ["ms"],
-		plugins: [typescript()],
+		plugins: [typescript({ tsconfig: "./tsconfig.json" })],
 		output: [
 			{ file: pkg.main, format: "cjs", exports: "auto" },
 			{ file: pkg.module, format: "es", exports: "auto" },

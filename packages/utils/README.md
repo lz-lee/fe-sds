@@ -1,11 +1,10 @@
 # `@fe-sds/utils`
 
-> TODO: description
+> 工具方法
 
 ## Usage
 
 ```
-const utils = require('@fe-sds/utils');
+import { downloadFile }  from '@fe-sds/utils'
 
-// TODO: DEMONSTRATE API
 ```
